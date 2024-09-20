@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadGen Pro - AI-Powered Salesforce Lead Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>LeadGen Pro</h1>
+        <form id="leadGenForm">
+            <label for="webToLeadHtml">Paste your Salesforce Web-to-Lead HTML code:</label>
+            <textarea id="webToLeadHtml" rows="10" required></textarea>
+
+            <label for="numLeads">Number of leads to generate:</label>
+            <input type="number" id="numLeads" min="1" max="1000" required>
+
+            <label for="inspiration">TV show or movie inspiration (optional):</label>
+            <input type="text" id="inspiration">
+
+            <label for="useCase">Use case (optional):</label>
+            <input type="text" id="useCase" placeholder="e.g., B2B software sales, real estate leads">
+
+            <button type="submit">Generate Leads</button>
+        </form>
+
+        <div id="result"></div>
+        <button id="downloadCsv" style="display: none;">Download CSV</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
